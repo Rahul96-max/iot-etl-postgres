@@ -25,6 +25,20 @@ python src\transform.py
 python src\load_and_report.py
 ```
 
+## Testing
+
+Run smoke tests to validate the pipeline state:
+
+```powershell
+python tests_smoke.py
+```
+
+Tests verify:
+- Output files exist (dq_report.csv, cleaned.csv, daily_kpis.csv)
+- Data integrity (required columns, no nulls)
+- Data ranges (temperature, humidity, battery valid ranges)
+- Database tables populated (bronze, silver, gold layers)
+
 ## Outputs
 
 - `outputs/dq_report.csv`
